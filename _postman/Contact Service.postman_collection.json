@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "74ea1340-ed8b-4f17-a6ca-51bbbd7f7461",
+		"name": "Contact Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Amin\",\n\t\"lastName\": \"Abbasi\",\n\t\"email\": \"amin4193@gmail.com\",\n\t\"age\": 33,\n\t\"phone\": 9364026636\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Amin\",\n\t\"lastName\": \"Abbasi\",\n\t\"email\": \"amin4193@gmail.com\",\n\t\"age\": 33,\n\t\"phone\": 9364026636\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "219"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"db-UWQet9MXv8eoXmA/Dk/YhjxoYYg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Jun 2021 10:55:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"Amin\",\n    \"lastName\": \"Abbasi\",\n    \"email\": \"amin4193@gmail.com\",\n    \"age\": 33,\n    \"phone\": 9364026636,\n    \"id\": \"6b22cae1-eb7a-46c8-b967-80f798dc7ce1\",\n    \"createdAt\": \"2021-06-30T10:55:38.708Z\",\n    \"updatedAt\": \"2021-06-30T10:55:38.708Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Amin",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Abbasi",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "9364026636",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List Contacts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact"
+							],
+							"query": [
+								{
+									"key": "firstName",
+									"value": "Amin",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "Abbasi",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "9364026636",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "332"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14c-zQEUlSCz9/3+DshcjBll2xUu0CI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Jun 2021 11:26:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total\": 5,\n    \"list\": [\n        {\n            \"firstName\": \"Amin\",\n            \"lastName\": \"Abbasi\",\n            \"phone\": \"9364026636\"\n        },\n        {\n            \"firstName\": \"Ali\",\n            \"lastName\": \"Hamidi\",\n            \"phone\": \"9354445566\"\n        },\n        {\n            \"firstName\": \"Reza\",\n            \"lastName\": \"Azizi\",\n            \"phone\": \"9123334455\"\n        },\n        {\n            \"firstName\": \"Hamid\",\n            \"lastName\": \"Mohammadi\",\n            \"phone\": \"9145556677\"\n        },\n        {\n            \"firstName\": \"Nima\",\n            \"lastName\": \"Abbasi\",\n            \"phone\": \"9127778899\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Contact Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact/6b22cae1-eb7a-46c8-b967-80f798dc7ce1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact",
+						"6b22cae1-eb7a-46c8-b967-80f798dc7ce1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Contact Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact/6b22cae1-eb7a-46c8-b967-80f798dc7ce1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact",
+								"6b22cae1-eb7a-46c8-b967-80f798dc7ce1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "221"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"dd-9IibpPVpb+3da2TBbqiOZxmYz3c\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Jun 2021 10:56:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6b22cae1-eb7a-46c8-b967-80f798dc7ce1\",\n    \"createdAt\": \"2021-06-30T10:55:38.708Z\",\n    \"updatedAt\": \"2021-06-30T10:55:38.708Z\",\n    \"firstName\": \"Amin\",\n    \"lastName\": \"Abbasi\",\n    \"email\": \"amin4193@gmail.com\",\n    \"phone\": \"9364026636\",\n    \"age\": 33\n}"
+				}
+			]
+		}
+	]
+}
